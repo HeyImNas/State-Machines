@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theory of Computation Solver</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Theory of Computation Solver</h1>
+        </header>
+
+        <main>
+            <section id="state-machine-section">
+                <h2>State Machine Analyzer</h2>
+                <div class="upload-container">
+                    <input type="file" id="state-machine-input" accept="image/*" class="file-input">
+                    <label for="state-machine-input" class="file-label">
+                        Upload State Machine Image
+                    </label>
+                </div>
+                <div id="state-machine-preview"></div>
+                <div id="state-machine-results" class="results"></div>
+            </section>
+
+            <section id="cfg-section">
+                <h2>CFG to State Machine Builder</h2>
+                <div class="input-container">
+                    <input type="text" id="cfg-input" placeholder="Enter CFG (e.g., (0+1)(11+01))" class="text-input">
+                    <button id="epsilon-btn" class="button epsilon-btn">ε</button>
+                    <button id="build-machine" class="button">Build Machine</button>
+                </div>
+                <div id="cfg-results" class="results"></div>
+                <div id="machine-canvas-container" class="machine-canvas-container">
+                    <button id="download-btn" class="button download-btn" style="display: none;">⬇ Download</button>
+                    <div id="machine-canvas"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script src="js/stateMachine.js"></script>
+    <script src="js/cfgParser.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
